@@ -1,0 +1,39 @@
+.browse-panes {
+  padding-top: 10px;
+  h2 {
+    padding: 0 0 10px 15px;
+    margin: 0;
+  }
+}
+
+.pane {
+  background: #fff;
+}
+
+.root {
+  display: block;
+  float: right;
+  width: 25%;
+}
+
+.section {
+  display: block;
+  float: right;
+  margin-left: -14%;
+  width: 25%;
+  border-left: 1px solid #bfc1c3;
+}
+
+.subsection {
+  border-left: 1px solid #bfc1c3;
+  float: right;
+  width: 49%;
+  min-height: 1px;
+  display: block;
+
+  &__hint {
+    line-height: 1;
+    float: left;
+    padding: 0 15px;
+  }
+}

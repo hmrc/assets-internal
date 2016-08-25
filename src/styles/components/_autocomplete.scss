@@ -1,0 +1,93 @@
+.ui-menu {
+  border: 1px solid #666;
+  margin: 0;
+  .ui-menu-item {
+    margin: 0;
+    padding: 5px;
+    font-size: 14px;
+    line-height: 1;
+  }
+  .ui-state-focus {
+    background: #008770;
+    a {
+      color: #fff;
+    }
+  }
+  a {
+    cursor: pointer;
+    text-decoration: none;
+  }
+  li.ui-menu-item {
+    padding: 0;
+    a.ui-menu-item-wrapper {
+      padding: 5px;
+      display: block;
+      &:hover {
+        background: $brand-primary;
+        color: #fff;
+      }
+    }
+    .ui-state-active {
+      background: $brand-primary;
+      color: #fff;
+      border: 0;
+      outline: 0;
+    }
+  }
+}
+
+.ui-autocomplete-loading {
+  background: white url("/images/ui-anim_basic_16x16.gif") right center no-repeat !important;
+}
+
+span.user-contact {
+  display: inline-block;
+  color: #222;
+  margin: 2px 5px;
+  max-width: 325px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  direction: ltr;
+  cursor: move;
+  position: absolute;
+  top: 13px;
+  span.user-contact-text {
+    background-color: #f5f5f5;
+    border: 1px solid #d9d9d9;
+    cursor: default;
+    display: block;
+    height: 23px;
+    white-space: nowrap;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    span.inner {
+      display: inline-block;
+      color: #222;
+      margin: 2px 5px;
+      max-width: 325px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      direction: ltr;
+      cursor: move;
+    }
+  }
+  a {
+    display: inline-block;
+    width: 14px;
+    height: 20px;
+    background: no-repeat url(//ssl.gstatic.com/apps/gadgets/contactarea/contactarea_sprite_2.gif) -4px 0;
+    opacity: .6;
+    vertical-align: top;
+    cursor: pointer;
+    text-indent: -9999px;
+  }
+}
+
+.ui-autocomplete {
+  width: 250px !important;
+  background: #fff;
+}
+
+.ui-helper-hidden-accessible {
+  display: none;
+}

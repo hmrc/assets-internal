@@ -1,0 +1,25 @@
+{
+  "name": "assets-internal",
+  "version": "1.0.0",
+  "config": {
+    "src": "./src/styles",
+    "dest": "./dest"
+  },
+  "scripts": {
+    "clean": "rimraf ${npm_package_config_dest}",
+    "build": "npm run css:build && bannerize dest/application.css --banner=banner.ejs",
+    "css:watch": "npm run css:build -- -w",
+    "css:build": "node-sass --source-map true ${npm_package_config_src} -o ${npm_package_config_dest}",
+    "start": "npm run clean && npm run build && npm run css:watch"
+  },
+  "dependencies": {
+    "bannerize": "^1.0.2",
+    "flexbox": "0.0.3",
+    "font-awesome": "4.6.3",
+    "node-sass": "^3.7.0",
+    "rimraf": "^2.5.4"
+  },
+  "devDependencies": {
+    "kss": "2.4.0"
+  }
+}

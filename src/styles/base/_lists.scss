@@ -1,0 +1,95 @@
+@import "../settings/variables";
+
+/*
+List - sidebar navigation links
+
+Markup:
+<ul class="vertical-nav-list">
+    <li class="vertical-nav-list__item">
+      <a class="vertical-nav-list__link">Example link</a>
+</ul>
+
+Styleguide: components.list
+*/
+.vertical-nav-list {
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: #fff;
+  &__item {
+    overflow: hidden;
+    display: block;
+  }
+
+  &__link {
+    color: $primarynav-link-inactive;
+    padding: 10px 15px;
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+    &:after {
+      top: 50%;
+      margin-top: -2px;
+      right: 10px;
+      float: right;
+      content: "\203A";
+    }
+    &:hover {
+      background: $primarynav-link-inactive-bg-hover;
+      color: $brand-primary;
+    }
+  }
+
+  &__subsectionlink {
+    color: $brand-primary;
+    padding: 5px 15px;
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+    &:hover {
+      //color: $primarynav-link-inactive;
+      color: $brand-primary-hover;
+    }
+  }
+
+  &__item--nested {
+    font-size: 14px;
+    text-indent: 25px;
+    .active {
+      a {
+        &:hover {
+          background: $brand-primary;
+          color: $primarynav-link-active;
+        }
+      }
+    }
+  }
+
+  &__item--active {
+    & > a, & > a:hover {
+      background: $brand-primary;
+      color: $primarynav-link-active;
+    }
+  }
+  &__item--nested-active {
+    a, a:hover {
+      background: $brand-primary;
+      color: $primarynav-link-active;
+    }
+  }
+}
+
+
+.unbulleted {
+  margin: 80px 0 0;
+  padding: 0;
+  &__item {
+    list-style-type: none;
+    margin: 0 0 40px 0;
+  }
+}

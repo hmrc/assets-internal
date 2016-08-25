@@ -1,0 +1,126 @@
+.header {
+  background: #000;
+}
+.header-bar {
+  height: 10px;
+  background: $brand-primary;
+}
+
+.header-inner {
+  position: relative;
+  margin: 0 auto;
+  width: 960px;
+}
+
+.header-list {
+  display: inline-block;
+  padding: 0;
+  margin: 0 0 0 20px;
+  &__item {
+    display: inline;
+    list-style: none;
+    margin: 0;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__link--active {
+    color: $brand-primary;
+  }
+}
+
+$arrow-size: 5px;
+
+.logout-menu {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0;
+  z-index: 1;
+  &__item {
+
+  }
+
+  &__toggle-link {
+    font-weight: bold;
+    text-decoration: none;
+    padding: 15px 15px 15px 10px;
+    display: inline-block;
+    text-align: right;
+    float: right;
+    color: #fff;
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;;
+    }
+    i {
+      width: 0;
+      height: 0;
+      border-left: $arrow-size solid transparent;
+      border-right: $arrow-size solid transparent;
+      border-top: $arrow-size solid #fff;
+      font-size: 0;
+      line-height: 0;
+      position: relative;
+      left: 5px;
+      top: -2px;
+    }
+  }
+
+  &__toggle-link--active {
+    color: black;
+    background: white;
+    i {
+      border-top: $arrow-size solid #000;
+    }
+  }
+
+  &__option-link {
+    padding: 10px 70px 10px 20px;
+    text-decoration: none;
+    display: block;
+    background: #fff;
+    &:hover {
+      background: $brand-primary;
+      color: #fff
+    }
+  }
+
+  &__toggle-inner {
+    border: 1px solid #ccc;
+    background: white;
+    margin-top: 54px;
+    border-top: 0;
+    border-radius: 0 0 3px 3px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .3);
+  }
+}
+
+.header-logo {
+  margin: 8px 0 0 0;
+  overflow: hidden;
+  float: left;
+  &__image {
+    margin: 0;
+    float: left;
+  }
+  &__link {
+    margin: 0;
+  }
+  &__span {
+    color: #fff;
+    float: left;
+    margin: -3px 0 0 5px;
+    font-size: 28px;
+    font-weight: bold;
+  }
+}

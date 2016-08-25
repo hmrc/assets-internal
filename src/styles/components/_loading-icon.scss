@@ -1,0 +1,15 @@
+.loading-icon {
+  padding-top:10rem;
+    color: $brand-primary;
+    text-align: center;
+
+    .icon {
+        font-size: 40px;
+    }
+    .message {
+        font-size: 24px;
+        color: $brand-secondary;
+        margin-left: 5px;
+
+    }
+}

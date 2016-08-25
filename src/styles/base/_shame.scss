@@ -1,0 +1,23 @@
+&.nbt {
+  border-top: 0 !important;
+}
+
+&.nbb, tr.nbb td {
+  border-bottom: 0 !important;
+}
+
+&.dbt {
+  border-top: $light-border !important;
+}
+
+&.dbb {
+  border-bottom: $light-border !important;
+}
+
+&.hbt {
+  border-top: $heavy-border !important;
+}
+
+&.hbb {
+  border-bottom: $heavy-border !important;
+}

@@ -1,0 +1,174 @@
+.field-error {
+  min-height: 2.2rem;
+  color: $error-color;
+  padding-top: 3px;
+}
+
+a.cancel-link {
+  color: $brand-tertiary;
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.form {
+  border-top: 1px solid darken($light-grey, 5%);
+  border-bottom: $light-border;
+  display: block;
+  font-size: 15px;
+  margin: 0;
+  position: relative;
+  &__label {
+    padding: $padding-vertical 15px;
+    line-height: 1;
+    display: inline-block;
+    border-bottom: $light-border;
+    width: 34%;
+    font-weight: bold;
+    color: $dt-colour;
+  }
+  &__label--doubleheight {
+    float: left;
+    padding-bottom: 49px;
+  }
+  &__label--mini {
+    width: 18%;
+    float: left;
+    padding-top: 18px;
+    padding-bottom: 19px;
+  }
+  &__label--nopadding {
+    padding: 0;
+  }
+  &__label--extrapadding {
+    padding: $padding-vertical 15px;
+    display: block;
+  }
+  &__label--checkbox-wrapper {
+    margin-bottom: 5px;
+  }
+  &__label--checkbox {
+    color: #000;
+    input {
+      margin-right: 5px;
+    }
+  }
+  &__input {
+    padding: $padding-vertical 15px;
+    line-height: 1;
+    display: inline-block;
+    border-bottom: $light-border;
+    width: 57%;
+    margin: 0;
+    color: $dd-colour;
+  }
+  &__label--noborder {
+    border-bottom: 0;
+  }
+  &__input--edit {
+    padding: 0;
+    border-bottom: 0;
+  }
+  &__input--bottommargin {
+    margin-bottom: 8px;
+  }
+
+  &__label--link {
+    padding: 13px 15px;
+    width: 100%;
+    display: block;
+    position: relative;
+    border-bottom: 1px solid #e9ebee;
+    &:hover {
+      //color: $dd-colour;
+      //background: #eaf2ef;
+      text-decoration: underline;
+      cursor: pointer;
+      &:after {
+        text-decoration: underline;
+        background: url("/images/icon-sprites.png") 0 -10px no-repeat;
+      }
+    }
+    &:after {
+      content: "Edit";
+      position: absolute;
+      right: 15px;
+      color: $link-colour;
+      padding-left: 22px;
+    }
+  }
+
+  &.form-entry {
+    dt, dd {
+      border-top: $light-border;
+    }
+    dt {
+      float: left;
+      border-bottom: 0;
+    }
+    dd {
+      label {
+        color: $dt-colour;
+      }
+      .button-wrapper {
+        a.cancel-link {
+          position: relative;
+          top: 6px;
+          padding: 9px 8px;
+        }
+        button {
+          width: auto;
+          font-size: 16px;
+          padding: 4px 11px;
+          margin-top: 10px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  &--nobottomborder {
+    border-bottom: 0;
+  }
+  &--highlight {
+    background: #f2f2f2;
+    margin: 0;
+    dt {
+      border: 0;
+      float: left;
+    }
+
+    dd {
+      border: 0;
+    }
+  }
+}
+
+.button-wrapper-footer {
+  margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+  .button-wrapper-footer {
+    padding-left: 34%;
+    margin-left: 15px;
+  }
+}
+
+.main-content-wrapper {
+  margin: 6px 6px 6px 26px;
+  width: 100%;
+  .alert {
+    margin-left: 7px;
+  }
+  #loading-icon {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.userprofile-page {
+  .main-content-wrapper {
+    margin: 0;
+  }
+}

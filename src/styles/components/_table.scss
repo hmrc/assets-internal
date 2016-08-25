@@ -1,0 +1,367 @@
+@mixin mini-sprite($bg-pos-x: -4px, $bg-pos-y: -79px, $width: 16px, $height: 16px) {
+  width: $width;
+  height: $height;
+  background-position: $bg-pos-x $bg-pos-y;
+  background-image: url('/images/icon-sprites.png');
+  background-repeat: no-repeat;
+  display: inline-block;
+  text-indent: -5000rem;
+}
+
+.no-tasks-hint {
+  color: #666;
+  text-align: center;
+  padding-top: 10rem;
+}
+
+.tasks-table {
+  margin-top: 1rem;
+  border-collapse: collapse;
+  tr {
+    &.awaitingApprovalRow {
+      i.approval-indicator-icon {
+        display: inline-block !important;
+      }
+      &:hover {
+        background: #eaf2ef;;
+        cursor: pointer;
+        i.approval-indicator-icon {
+          opacity: 1;
+        }
+        span.awaiting {
+          background: orange !important;
+          color: #fff !important;
+        }
+      }
+    }
+  }
+  th {
+    border-bottom: 1px solid #bfc1c3;
+    text-align: left;
+  }
+  td {
+    //border-bottom: 1px solid #bfc1c3;
+    padding:10px 0;
+    &.task-creator {
+      a:visited {
+        color: $brand-primary;
+      }
+    }
+    &.task-action {
+      cursor: pointer;
+      font-size: 18px;
+      line-height: 1;
+      padding: 0px 1px 0 0px;
+      text-align: center;
+      a:visited {
+        color: $brand-primary;
+      }
+    }
+    &.task-status {
+      position: relative;
+      i.approval-indicator-icon {
+        display: none;
+        position: absolute;
+        left: 136px;
+        top: 18px;
+        font-size: 13px;
+        color: #008770;
+        pointer-events: none;
+        opacity: 0.3;
+      }
+      i.approval-action-icon {
+        display: none;
+        color: orange;
+        margin-left: 5px;
+        margin-top: 6px;
+        pointer-events: none;
+      }
+      a {
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+      i.fa-link {
+        color: $brand-primary;
+        position: absolute;
+        margin-top: 6px;
+        margin-left: 3px;
+      }
+      span.status-type {
+        display: block;
+        text-align: center;
+        width: 130px;
+        text-transform: uppercase;
+        border-radius: 3px;
+        border: 1px solid black;
+        padding: 3px 24px 0;
+        font-size: 12px;
+        line-height: 1;
+        background: #fff;
+        max-width: 120px;
+        &.complete {
+          color: green;
+          border-color: green;
+        }
+        &.awaiting {
+          color: orange;
+          border-color: orange;
+          position: relative;
+          float: left;
+          a {
+            color: orange;
+            border-color: orange;
+            text-decoration: underline;
+            position: relative;
+          }
+          &:hover {
+            color: #fff;
+            background: orange;
+            cursor: pointer;
+            a {
+              color: #fff;
+              text-decoration: none;
+            }
+          }
+        }
+        &.rejected {
+          color: red;
+          border-color: red;
+        }
+        &.failed, &.failure {
+          color: red;
+          border-color: red;
+          display: inline-block;
+          position: relative;
+        }
+        &.processing {
+          color: #838181;
+          border-color: #838181;
+        }
+        i {
+          position: absolute;
+          right: 10px;
+          top: 2px;
+        }
+      }
+      i.info {
+        position: absolute;
+        top: 11px;
+        margin-left: 5px;
+      }
+      .button-wrapper {
+        text-align: center;
+        width: 170px;
+        height: 56px;
+        left: -21px;
+        -webkit-box-shadow: 0px 0px 5px #666666;
+        -moz-box-shadow: 0px 0px 5px #666666;
+        box-shadow: 0px 0px 5px #666666;
+        border-radius: 3px;
+        border: 1px solid #c5c5c5;
+        position: absolute;
+        top: -61px;
+        background: #fff;
+        // css-only triangle for popup
+        &:before, &:after {
+          content: ' ';
+          height: 0;
+          position: absolute;
+          width: 0;
+          border: 15px solid transparent; /* arrow size */
+          left: 69px;
+        }
+        &:before {
+          border-top-color: #fff; /* arrow color */
+          /* positioning */
+          position: absolute;
+          top: 54px;
+          z-index: 2;
+        }
+        &:after {
+          border-top-color: #b4b1b1; /* arrow color */
+          /* positioning */
+          position: absolute;
+          top: 56px;
+          z-index: 1;
+        }
+        button {
+          margin: 1rem 0.5rem 0 0.5rem;
+          width: 74px;
+          &.reject {
+            background: #b10e1e !important;
+          }
+        }
+      }
+      .loading-icon {
+        text-align: left;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        .icon-wrapper {
+          display: inline-block;
+          i {
+            font-size: 23px;
+          }
+        }
+        .message-wrapper {
+          display: inline-block;
+          position: relative;
+          top: -3px;
+          .message {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+
+  tr.subtask-row {
+    td {
+      padding: 0;
+    }
+  }
+  tr.odd-row {
+    td {
+      background: #ececec;
+    }
+  }
+}
+
+.sub-tasks {
+  margin: 10px auto;
+  text-transform: capitalize;
+  width: 33%;
+  tr {
+    th {
+      border-bottom: 0;
+      text-align: left;
+    }
+    td {
+
+      border-bottom: 0;
+    }
+  }
+}
+
+i.accept_icon {
+  @include mini-sprite(-4px, -55px, 16px, 16px);
+  position: absolute;
+  top: 12px;
+  left: 132px;
+}
+
+.app-errors-wrapper {
+  width: 220px;
+  margin: 0;
+  .app-error {
+    @include mini-sprite(120px, -29px, 140px, 16px);
+    width: auto;
+    position: relative;
+    top: -1px;
+    position: relative;
+    top: -1px;
+    float: left;
+    clear: both;
+    margin-bottom: 10px;
+    padding-left: 0;
+    text-indent: 5px;
+    text-transform: capitalize;
+  }
+  .app-error i {
+    @include mini-sprite(-4px, -277px, 16px, 14px);
+    position: relative;
+    float: left;
+    visibility: visible;
+    margin-top: 2px;;
+    display: inline-block;
+  }
+
+  .app-error-failure i {
+    @include mini-sprite(-4px, -31px, 16px, 14px);
+  }
+
+  .app-error-tick i {
+    background-position-y: -157px;
+  }
+  .app-error-queued i {
+    background-position-y: -327px;
+  }
+  .app-error-slack i {
+    background-position-y: -157px;
+  }
+  .app-error-deskpro i {
+    background-position-y: -131px;
+  }
+  .app-error-jira i {
+    background-position-y: -191px;
+  }
+  .app-error-confluence i {
+    background-position-y: -98px;
+  }
+  .app-error-google i {
+    background-position-y: -223px;
+  }
+  .app-error-github i {
+    background-position-y: -250px;
+  }
+}
+
+.app-error-list {
+  text-transform: capitalize;
+  dt {
+    text-indent: 7px;
+    font-weight: normal;
+    width: 118px;
+    float: left;
+    clear: left;
+    margin-right: 10px;
+    text-align: right;
+    font-weight: bold;
+    span.app-error {
+      display: none;
+      float: right;
+      i {
+      }
+    }
+  }
+
+  dd {
+    text-align: left;
+    width: 78px;
+    float: left;
+    text-indent: 4px;
+    line-height: 1.2;
+    display: block;
+    span.app-error {
+      float: right;
+      display: none;
+      i {
+
+      }
+    }
+  }
+}
+
+i.info {
+  @include mini-sprite();
+}
+
+#category-filter {
+  display: inline;
+}
+
+.tasks-table-filter-wrapper {
+  label {
+    &#task-status-label {
+    }
+    padding-right: 1rem;
+  }
+  select {
+    display: inline-block;
+    margin-right: 3rem;
+    text-transform: capitalize;
+  }
+}
+
+
