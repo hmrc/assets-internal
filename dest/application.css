@@ -1570,8 +1570,7 @@ span.user-contact {
 
 .ui-autocomplete {
   width: 250px !important;
-  background: #fff;
-  z-index: 100001; }
+  background: #fff; }
 
 .ui-helper-hidden-accessible {
   display: none; }
@@ -2179,7 +2178,7 @@ i.info {
   bottom: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.8);
-  z-index: 99999;
+  z-index: 99;
   opacity: 0;
   -webkit-transition: opacity 400ms ease-in;
   -moz-transition: opacity 400ms ease-in;
