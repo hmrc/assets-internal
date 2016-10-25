@@ -1351,6 +1351,7 @@ a.cancel-link {
       content: "Edit";
       position: absolute;
       right: 15px;
+      top: 14px;
       color: #008770;
       padding-left: 22px; }
   .form.form-entry dt, .form.form-entry dd {
@@ -2202,6 +2203,9 @@ i.info {
 
 .modalDialog button {
   margin-right: 25px; }
+
+.modalDialog .input--fullwidth {
+  width: 100%; }
 
 .close {
   background: #606061;
