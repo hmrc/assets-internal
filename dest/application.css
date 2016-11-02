@@ -1320,6 +1320,9 @@ a.cancel-link {
     color: #000; }
     .form__label--checkbox input {
       margin-right: 5px; }
+  .form__label--nobordertop {
+    border: 0;
+    float: left; }
   .form__input {
     padding: 13px 15px;
     line-height: 1;
@@ -1361,16 +1364,6 @@ a.cancel-link {
     border-bottom: 0; }
   .form.form-entry dd label {
     color: #333; }
-  .form.form-entry dd .button-wrapper a.cancel-link {
-    position: relative;
-    top: 6px;
-    padding: 9px 8px; }
-  .form.form-entry dd .button-wrapper button {
-    width: auto;
-    font-size: 16px;
-    padding: 4px 11px;
-    margin-top: 10px;
-    margin-right: 10px; }
   .form--nobottomborder {
     border-bottom: 0; }
   .form--highlight {
@@ -1381,6 +1374,18 @@ a.cancel-link {
       float: left; }
     .form--highlight dd {
       border: 0; }
+
+.button-wrapper a.cancel-link {
+  position: relative;
+  top: 6px;
+  padding: 9px 8px; }
+
+.button-wrapper button {
+  width: auto;
+  font-size: 16px;
+  padding: 4px 11px;
+  margin-top: 10px;
+  margin-right: 10px; }
 
 .button-wrapper-footer {
   margin-top: 10px; }
