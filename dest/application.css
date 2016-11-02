@@ -1376,8 +1376,6 @@ a.cancel-link {
       border: 0; }
 
 .button-wrapper a.cancel-link {
-  position: relative;
-  top: 6px;
   padding: 9px 8px; }
 
 .button-wrapper button {
