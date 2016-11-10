@@ -55,7 +55,7 @@ a.cancel-link {
     }
   }
   &__label--nobordertop {
-    border:0;
+    border: 0;
     float: left;
   }
   &__input {
@@ -134,6 +134,7 @@ a.cancel-link {
     }
   }
 }
+
 .button-wrapper {
   a.cancel-link {
     padding: 9px 8px;
@@ -170,8 +171,10 @@ a.cancel-link {
   }
 }
 
-.userprofile-page {
-  .main-content-wrapper {
-    margin: 0;
-  }
+.alert {
+  padding-left: 14px;
+}
+
+.search_input {
+  margin-bottom: 20px;
 }

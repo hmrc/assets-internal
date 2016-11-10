@@ -89,6 +89,11 @@ Styleguide: components.list
   }
 }
 
+.vertical-nav-list__rightborder {
+  border-right: 1px solid #bfc1c3;
+  padding-right: 0;
+}
+
 .unbulleted {
   //margin: 80px 0 0;
   padding: 0;
@@ -96,4 +101,8 @@ Styleguide: components.list
     list-style-type: none;
     margin: 0 0 40px 0;
   }
+}
+
+.team-editing-wrapper {
+  padding-top: 40px;
 }

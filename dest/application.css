@@ -1214,6 +1214,17 @@ table {
     -webkit-box-ordinal-group: 2;
     order: 1; } }
 
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap; }
+
+.row > [class*='col-'] {
+  display: flex;
+  flex-direction: column; }
+
 .navbar .container {
   width: 960px;
   margin: 0 auto; }
@@ -1402,8 +1413,11 @@ a.cancel-link {
     padding-top: 20px;
     padding-bottom: 20px; }
 
-.userprofile-page .main-content-wrapper {
-  margin: 0; }
+.alert {
+  padding-left: 14px; }
+
+.search_input {
+  margin-bottom: 20px; }
 
 /*
 List - sidebar navigation links
@@ -1468,12 +1482,18 @@ Styleguide: components.list
     background: #008770;
     color: #ffffff; }
 
+.vertical-nav-list__rightborder {
+  border-right: 1px solid #bfc1c3;
+  padding-right: 0; }
+
 .unbulleted {
-  margin: 80px 0 0;
   padding: 0; }
   .unbulleted__item {
     list-style-type: none;
     margin: 0 0 40px 0; }
+
+.team-editing-wrapper {
+  padding-top: 40px; }
 
 .nbt {
   border-top: 0 !important; }
@@ -1577,7 +1597,8 @@ span.user-contact {
 
 .ui-autocomplete {
   width: 250px !important;
-  background: #fff; }
+  background: #fff;
+  overflow: hidden; }
 
 .ui-helper-hidden-accessible {
   display: none; }
@@ -2055,9 +2076,7 @@ i.info {
 .section {
   display: block;
   float: right;
-  margin-left: -14%;
-  width: 25%;
-  border-left: 1px solid #bfc1c3; }
+  width: 25%; }
 
 .subsection {
   border-left: 1px solid #bfc1c3;
