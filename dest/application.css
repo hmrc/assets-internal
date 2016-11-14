@@ -1418,7 +1418,8 @@ a.cancel-link {
   padding-left: 14px; }
 
 .search_input {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  float: right; }
 
 /*
 List - sidebar navigation links
